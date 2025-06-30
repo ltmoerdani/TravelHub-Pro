@@ -1,0 +1,37 @@
+{
+  "name": "@travel-agency/web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rm -rf .solid dist"
+  },
+  "dependencies": {
+    "@kobalte/core": "^0.12.6",
+    "@solidjs/meta": "^0.29.3",
+    "@solidjs/router": "^0.8.3",
+    "@tanstack/solid-query": "^5.24.1",
+    "@travel-agency/contracts": "workspace:*",
+    "@travel-agency/ui": "workspace:*",
+    "@travel-agency/utils": "workspace:*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "solid-js": "^1.8.15",
+    "solid-start": "^0.3.11",
+    "tailwind-merge": "^1.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "solid-start-node": "^0.3.11",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11",
+    "vite-plugin-solid": "^2.10.1"
+  }
+}
