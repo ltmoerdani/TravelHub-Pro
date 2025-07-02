@@ -1,6 +1,7 @@
 import { Title } from "@solidjs/meta";
 import { createSignal, onMount } from "solid-js";
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from "@travel-agency/ui";
+import { Component } from "solid-js";
 
 interface Booking {
   id: string;
@@ -11,7 +12,7 @@ interface Booking {
   date: string;
 }
 
-export default function Dashboard() {
+const Dashboard: Component = () => {
   const [stats, setStats] = createSignal({
     totalBookings: 0,
     revenue: 0,
@@ -221,4 +222,6 @@ export default function Dashboard() {
       </div>
     </main>
   );
-}
+};
+
+export default Dashboard;

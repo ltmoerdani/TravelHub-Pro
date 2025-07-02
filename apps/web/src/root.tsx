@@ -3,15 +3,15 @@ import { Suspense } from "solid-js";
 import {
   Body,
   ErrorBoundary,
-  FileRoutes,
   Head,
   Html,
   Meta,
-  Routes,
   Scripts,
   Title,
 } from "solid-start";
+import { Router } from "@solidjs/router";
 import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
+import App from "./app";
 import "./app.css";
 
 const queryClient = new QueryClient({
@@ -34,15 +34,15 @@ export default function Root() {
       <Body>
         <ErrorBoundary>
           <QueryClientProvider client={queryClient}>
-            <Suspense fallback={
-              <div class="flex items-center justify-center min-h-screen">
-                <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600" />
-              </div>
-            }>
-              <Routes>
-                <FileRoutes />
-              </Routes>
-            </Suspense>
+            <Router>
+              <Suspense fallback={
+                <div class="flex items-center justify-center min-h-screen">
+                  <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600" />
+                </div>
+              }>
+                <App />
+              </Suspense>
+            </Router>
           </QueryClientProvider>
         </ErrorBoundary>
         <Scripts />

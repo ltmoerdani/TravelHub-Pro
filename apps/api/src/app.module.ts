@@ -9,6 +9,12 @@ import { CustomersModule } from './customers/customers.module';
 import { PaymentsModule } from './payments/payments.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { UmrohModule } from './umroh/umroh.module';
+import { InventoryModule } from './inventory/inventory.module';
+import { AgentsModule } from './agents/agents.module';
+import { DocumentsModule } from './documents/documents.module';
+import { MarketingModule } from './marketing/marketing.module';
+import { NotificationsModule } from './notifications/notifications.module';
+import { SearchModule } from './search/search.module';
 
 @Module({
   imports: [
@@ -25,6 +31,12 @@ import { UmrohModule } from './umroh/umroh.module';
     PaymentsModule,
     AnalyticsModule,
     UmrohModule,
+    InventoryModule,
+    AgentsModule,
+    DocumentsModule,
+    MarketingModule,
+    NotificationsModule,
+    SearchModule,
   ],
 })
 export class AppModule {}

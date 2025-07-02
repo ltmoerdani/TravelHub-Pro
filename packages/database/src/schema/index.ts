@@ -4,3 +4,7 @@ export * from './bookings';
 export * from './customers';
 export * from './payments';
 export * from './umroh';
+export * from './inventory';
+export * from './agents';
+export * from './documents';
+export * from './marketing';
